@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 static string ternary_operator() {
@@ -51,28 +52,52 @@ static void string_operations() {
 
 static void loops() {
 	// while loop
-	bool is_valid = false;
-	bool value;
-	while(is_valid == false) {
-		cout << "Enter True to end: ";
-		cin >> value;
-		if (value) {
-			is_valid = true;
+	//bool is_valid = 0; // 0 means false and 1 means true
+	//bool value;
+	//while(!is_valid) {
+	//	cout << "Enter True to end: ";
+	//	cin >> value;
+	//	if (value) {
+	//		is_valid = true;
+	//	}
+	//	else {
+	//		cout << "Try again!" << endl;
+	//		cin.clear();
+	//	}
+	//
+	//}
+
+	// do while loop = do some block of code first then repeat again if the condition is true!
+	// for loops:
+	for (int i = 1; i < 10; i++) {
+		if (i == 4) {
+			continue;
 		}
-		else {
-			cout << "Try again!" << endl;
+		if (i == 7) {
+			break;
 		}
-	
+
+		cout << i << endl;
 	}
 }
 
+static void random_number_generator() {
+	time_t timestamp = time(NULL);
+	//cout << "Without using the address:" << ctime(timestamp) << endl;
+	cout << "This is the time : " << ctime(&timestamp) << endl;
+	srand(time(NULL));
+	cout << time(NULL) << endl;
+	int randNum = rand() % 101;
+	cout << randNum << endl;
+}
 
 int main() {
 	//if statements
 	//string if_statement_message = if_statements();
 	//cout << if_statement_message;
 	//string_operations();
-	loops();
+	//loops();
+	random_number_generator();
 	return 0;
 }
 
