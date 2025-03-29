@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <vector>
+#include <array>
 using namespace std;
 
 static string ternary_operator() {
@@ -91,13 +93,45 @@ static void random_number_generator() {
 	cout << randNum << endl;
 }
 
+
+//global scope
+int num = 3;
+static void printNum() {
+	int num = 1;
+	//using the :: in variable indicates its reference to the global variable rather than local
+	cout << ::num << endl;
+
+}
+
+
+static void arrays() {
+	array<string, 3> test_array = { "Arun", "barun", "Carun"}; //STL Array Library
+	string car[] = { "Toyota", "Honda"};
+	cout << car[1] << endl;
+	//sizeof() -> determines the size in bytes of a variable, data type, class, objects etc
+	/*cout << sizeof(car) << endl;
+	cout << sizeof(test_array) << endl;
+	for (int i = 0; i < sizeof(test_array) / sizeof(string); i++) {
+		cout << test_array[i] << endl;
+	}
+
+	for each(string var in test_array)
+	{
+		cout << var << endl;
+	}*/
+
+
+}
+
 int main() {
 	//if statements
 	//string if_statement_message = if_statements();
 	//cout << if_statement_message;
 	//string_operations();
 	//loops();
-	random_number_generator();
+	//random_number_generator();
+	//printNum();
+	arrays();
 	return 0;
 }
 
