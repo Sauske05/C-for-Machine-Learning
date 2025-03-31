@@ -123,17 +123,17 @@ static void arrays() {
 
 }
 
-int main() {
-	//if statements
-	//string if_statement_message = if_statements();
-	//cout << if_statement_message;
-	//string_operations();
-	//loops();
-	//random_number_generator();
-	//printNum();
-	arrays();
-	return 0;
-}
+//int main() {
+//	//if statements
+//	//string if_statement_message = if_statements();
+//	//cout << if_statement_message;
+//	//string_operations();
+//	//loops();
+//	//random_number_generator();
+//	//printNum();
+//	arrays();
+//	return 0;
+//}
 
 
 

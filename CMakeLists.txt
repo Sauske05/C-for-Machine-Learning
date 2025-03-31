@@ -6,7 +6,7 @@ set(CMAKE_PREFIX_PATH "C:/libtorch-win-shared-with-deps-2.6.0+cpu/libtorch")
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
-add_executable(example-app example-app.cpp "C++ Basics/Basics.cpp")
+add_executable(example-app example-app.cpp "C++ Basics/Basics.cpp" "TestTorch/LinearRegression.cpp" "TestTorch/MLP_Regression.cpp")
 target_link_libraries(example-app "${TORCH_LIBRARIES}")
 set_property(TARGET example-app PROPERTY CXX_STANDARD 17)
 
