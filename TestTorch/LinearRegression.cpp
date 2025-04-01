@@ -71,10 +71,10 @@ public:
 	
 };
 
-int main() {
-	SimpleLinearRegression regression;
-	vector<double> x_train= { 1.0,2.0,3.0,4.0,5.0,6.0,7.0 };
-	vector<double> y_train = { 2.0,4.0,6.0,8.0,10.0,12.0,14.0 };
-	regression.train(x_train, y_train);
-	return 0;
-}
+//int main() {
+//	SimpleLinearRegression regression;
+//	vector<double> x_train= { 1.0,2.0,3.0,4.0,5.0,6.0,7.0 };
+//	vector<double> y_train = { 2.0,4.0,6.0,8.0,10.0,12.0,14.0 };
+//	regression.train(x_train, y_train);
+//	return 0;
+//}
